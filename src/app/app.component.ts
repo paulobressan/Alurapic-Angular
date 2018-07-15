@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PhotoService } from './photos/photo/photo.service';
 
 //criando um componente.
 @Component({
@@ -7,14 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-   photos =[
-     {
-      description:"Leoa1",
-      url: "http://pt.kabbalah.com/sites/dev02.kce.kabbalahcentres.com/files/14-07-18-leo-a-double-edged-sword.jpg"
-     },
-     {
-      description:"Leoa2",
-      url: "http://pt.kabbalah.com/sites/dev02.kce.kabbalahcentres.com/files/14-07-18-leo-a-double-edged-sword.jpg"
-     }
-   ]
+  
 }
