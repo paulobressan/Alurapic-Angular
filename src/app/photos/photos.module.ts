@@ -6,13 +6,15 @@ import { CommonModule } from '@angular/common';
 import { PhotoComponent } from './photo/photo.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
 import { PhotoFormComponent } from './photo-form/photo-form.component';
+import { PhotosComponent } from './photo-list/photos/photos.component';
 //criando modulo para encapsular tudo que é de photo.
 @NgModule({
     //declar componente que vão se comunicar entre eles.
     declarations: [
         PhotoComponent, 
         PhotoListComponent, 
-        PhotoFormComponent
+        PhotoFormComponent, 
+        PhotosComponent
     ],
     //importando outros modulos
     imports: [

@@ -1,1 +1,8 @@
-<ap-photo *ngFor="let photo of photos" [description]="photo.description" [url]="photo.url"></ap-photo>
+<div class="text-center mt-3 mb-3">
+    <form>
+        <input (keyup)="filter = $event.target.value" type="search" class="rounded" autofocus placeholder="Buscar...">
+    </form>
+</div>
+{{filter}}
+<ap-photos [photos]="photos"></ap-photos>
+
