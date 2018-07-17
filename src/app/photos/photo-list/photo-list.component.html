@@ -1,8 +1,8 @@
 <div class="text-center mt-3 mb-3">
     <form>
-        <input (keyup)="filter = $event.target.value" type="search" class="rounded" autofocus placeholder="Buscar...">
+        
+        <input (keyup)="debounce.next($event.target.value)" type="search" class="rounded" autofocus placeholder="Buscar...">
     </form>
 </div>
-{{filter}}
-<ap-photos [photos]="photos"></ap-photos>
+<ap-photos [photos]="photos | filterByDescription:filter"></ap-photos>
 

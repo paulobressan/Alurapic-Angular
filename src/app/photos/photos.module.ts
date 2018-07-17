@@ -7,6 +7,7 @@ import { PhotoComponent } from './photo/photo.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
 import { PhotoFormComponent } from './photo-form/photo-form.component';
 import { PhotosComponent } from './photo-list/photos/photos.component';
+import { FilterByDescription } from './photo-list/filter-by-description.pipe';
 //criando modulo para encapsular tudo que é de photo.
 @NgModule({
     //declar componente que vão se comunicar entre eles.
@@ -14,7 +15,8 @@ import { PhotosComponent } from './photo-list/photos/photos.component';
         PhotoComponent, 
         PhotoListComponent, 
         PhotoFormComponent, 
-        PhotosComponent
+        PhotosComponent,
+        FilterByDescription
     ],
     //importando outros modulos
     imports: [
