@@ -21,6 +21,6 @@ export class PhotoListResolver implements Resolve<Observable<Photo[]>>{
         //capturando o parametro da rota no momento de execução
         const userName = route.params.username;
         //Retornando os valores que o service retorna que é do mesmo tipo que o retorno da interface e metodo.
-        return this.service.listFromUser(userName);
+        return this.service.listFromUserPaginated(userName, 1);
     }
 }
