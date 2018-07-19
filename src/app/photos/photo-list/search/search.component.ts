@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "../../../../../node_modules/@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "../../../../../node_modules/@angular/core";
 import { Subject } from "../../../../../node_modules/rxjs";
 import { debounceTime } from "../../../../../node_modules/rxjs/operators";
 
@@ -10,6 +10,7 @@ export class SearchComponent implements OnInit {
     //Criando a saida de dados do componente (@Output)
     //O EventEmitter<String> é a classe que contem a criação de eventos dinamicos.
     @Output() onTyping = new EventEmitter<string>();
+    @Input() value: string = '';
     //patterns
     debounce: Subject<string> = new Subject<string>();
 

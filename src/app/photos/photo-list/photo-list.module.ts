@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { PhotoModule } from '../photo/photo.module';
 import { CardModule } from '../../shared/components/card/card.module';
 import { SearchComponent } from './search/search.component';
+import { TesteComponent } from './teste/teste.component';
+import { DarkenOnHoverModule } from '../../shared/directives/darken-on-hover/darken-on-hover.module';
 
 @NgModule({
     declarations: [
@@ -14,13 +16,15 @@ import { SearchComponent } from './search/search.component';
         PhotosComponent,
         LoadButtonComponent,
         SearchComponent,
+        TesteComponent,
         FilterByDescription
     ],
     imports:[
         //Common module responsavel pelas diretivas do angular como o NgFor.
         CommonModule,
         PhotoModule,
-        CardModule
+        CardModule,
+        DarkenOnHoverModule
     ]
 })
 export class PhotoListModule { }

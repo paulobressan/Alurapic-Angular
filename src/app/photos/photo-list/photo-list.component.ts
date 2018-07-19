@@ -18,6 +18,7 @@ export class PhotoListComponent implements OnInit {
   hasMore: boolean = true;
   currentPage: number = 1;
   userName: string = '';
+  testevalor: string = '';
 
   constructor(
     //indica a rota ativada no momento
@@ -35,6 +36,7 @@ export class PhotoListComponent implements OnInit {
     this.photoService
       .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(photos => {
+        this.filter = '';
         this.photos = this.photos.concat(photos);
         if (!photos.length) this.hasMore = false;
       });

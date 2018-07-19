@@ -1,4 +1,6 @@
+<!-- <ap-teste (apInputTeste)="testevalor = $event"></ap-teste>
+teste lista {{testevalor}} -->
 <!-- O onTyping é um evento dinamico criado, pode ser qualquer nome e o $event é o valor retornado do componente -->
-<ap-search (onTyping)="filter = $event"></ap-search>
+<ap-search (onTyping)="filter = $event" [value]="filter"></ap-search>
 <ap-photos [photos]="photos | filterByDescription:filter"></ap-photos>
 <ap-load-button (click)="load()" [hasMore]="hasMore"></ap-load-button>
