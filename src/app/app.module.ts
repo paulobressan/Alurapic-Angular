@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
+import { HomeModule } from './home/home.module';
  
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ErrorsModule } from './errors/errors.module';
     //Componente que gerencia todas as rotas
     AppRoutingModule,
     PhotosModule,
+    HomeModule,
     ErrorsModule
   ],
   providers: [],
