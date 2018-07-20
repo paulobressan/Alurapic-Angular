@@ -1,8 +1,8 @@
-import { Injectable } from "../../../../node_modules/@angular/core";
-import { Resolve, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from "../../../../node_modules/@angular/router";
+import { Injectable } from "@angular/core";
+import { Resolve, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 
 import { PhotoService } from "../photo/photo.service";
-import { Observable } from "../../../../node_modules/rxjs";
+import { Observable } from "rxjs";
 import { Photo } from "../photo/photo";
 
 //Tornando essa classe injetavel

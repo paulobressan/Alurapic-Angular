@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter, Input } from "../../../../../node_modules/@angular/core";
-import { Subject } from "../../../../../node_modules/rxjs";
-import { debounceTime } from "../../../../../node_modules/rxjs/operators";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import { Subject } from "rxjs";
+import { debounceTime } from "rxjs/operators";
 
 @Component({
     selector: 'ap-search',

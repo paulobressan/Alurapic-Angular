@@ -1,6 +1,6 @@
-import { NgModule } from "../../../../../node_modules/@angular/core";
+import { NgModule } from "@angular/core";
 import { CardComponent } from "./card.component";
-import { CommonModule } from "../../../../../node_modules/@angular/common";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
     declarations: [CardComponent],
