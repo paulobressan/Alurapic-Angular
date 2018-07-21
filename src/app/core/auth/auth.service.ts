@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 //operador tap do rxjs. O tap executa uma função anonima antes de retornar dados de um metodo.
 import {tap} from 'rxjs/operators';
 import { TokenService } from '../token/token.service';
+import { UserService } from '../user/user.service';
 
 const API: string = 'http://localhost:3000';
 
@@ -13,7 +14,7 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private tokenSerivce : TokenService
+    private userService : UserService
   ) { }
 
   authenticate(userName: string, password: string) {
@@ -21,7 +22,7 @@ export class AuthService {
    //criando um tubo para executar uma função antes do valor ser retornado
    .pipe(tap(res => {
      const authToken = res.headers.get('x-access-token');
-     this.tokenSerivce.setToken(authToken);
+     this.userService.setToken(authToken);
      console.log(authToken);
    }));
   }

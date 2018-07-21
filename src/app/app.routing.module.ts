@@ -6,11 +6,16 @@ import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 import { SiginComponent } from './home/signin/sigin.component';
+import { AuthGuard } from './core/auth/auth.guard';
+import { SignUpComponent } from './home/signup/signup.component';
 
 //variaveis de rotas
 const routes: Routes = [
     {
-        path: '', component: SiginComponent
+        path: '', component: SiginComponent, canActivate: [AuthGuard]
+    },
+    {
+        path: 'signup', component: SignUpComponent
     },
     { 
         //Para utilizar os resolver é necessario definir na rota o resolver que espera um parametro que é um objeto json
@@ -24,7 +29,7 @@ const routes: Routes = [
     },
     { 
         path: '**', component: NotFoundComponent 
-    }    
+    }
 ];
 
 @NgModule({
