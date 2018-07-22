@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
-import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
  
 @NgModule({
@@ -15,12 +14,11 @@ import { CoreModule } from './core/core.module';
   imports: [
     //O browser Module é responsavel pela aplicação funcionar e tambem exporta o common module.
     BrowserModule,
-    //Componente que gerencia todas as rotas
-    AppRoutingModule,
     PhotosModule,
-    HomeModule,
     ErrorsModule,
-    CoreModule
+    CoreModule,
+    //Componente que gerencia todas as rotas
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

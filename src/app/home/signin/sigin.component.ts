@@ -18,9 +18,9 @@ export class SiginComponent implements OnInit {
         //serviço de autenticação criado
         private authService: AuthService,
         //navegador de rotas programatico
-        private router : Router,
+        private router: Router,
         //usando o serviço criado para identificar a plataform para manipular o DOM sem problemas
-        private platformDetectorService : PlatformDetectorService
+        private platformDetectorService: PlatformDetectorService
     ) { }
 
     ngOnInit(): void {
@@ -31,9 +31,12 @@ export class SiginComponent implements OnInit {
             userName: ['', Validators.required],
             password: ['', Validators.required]
         });
+        //validando se esta no navegador para manipular o DOM
+        //Para ter todos os metodos disponivel de um input é necessario tipar o tipo de elemento html
+        this.platformDetectorService.isPlatformBrowser() && this.userNameInput.nativeElement.focus();
     }
 
-    login() {       
+    login() {
         //pegando o userName do loginForm
         const userName = this.loginForm.get('userName').value;
         const password = this.loginForm.get('password').value;
