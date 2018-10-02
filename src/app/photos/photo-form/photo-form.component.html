@@ -1,8 +1,10 @@
 <div class="container">
   <!-- Controlador do formulario -->
-  <form [formGroup]="photoForm" class="row">
+  <form [formGroup]="photoForm" class="row" (submit)="upload()">
     <div class="col-md-6 text-center">
-      <input formControlName='file' type="file" accept="image/*">
+      <!-- Usando o evento chane(mudança) para capturar os binarios do arquivos, a propriedade files é um array de arquivos
+      Selecionada pelo usuário, porem queremos somente uma imagem -->
+      <input formControlName='file' type="file" accept="image/*" (change)="file = $event.target.files[0]">
       <ap-vmessage text="Please, select a photo" *ngIf="photoForm.get('file').errors?.required"></ap-vmessage>
     </div>
 

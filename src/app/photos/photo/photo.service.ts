@@ -26,4 +26,17 @@ export class PhotoService {
             //Tudo que vim no get vai ser tratado como tipo Object, o segundo parametro é o parametro
             .get<Photo[]>(`${API}/${userName}/photos`, { params });
     }
+
+    upload(description: string, allowCommnents: boolean, file: File) {
+        //Não vamos enviar um json e sim um form-data porque vamos enviar arquivos
+        //Criando um form data
+        const formData = new FormData();
+        //Adicionando os dados para enviar
+        formData.append('description', description);
+        formData.append('allowComments', allowCommnents ? 'true' : 'false');
+        //Campo que recebe a imagem
+        formData.append('imageFile', file);
+        //Requisitando o servidor
+        return this.http.post(`${API}/photos/upload`, formData);
+    }
 }
